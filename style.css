@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Quite Chocolatey";
+  src: url("Quite_Chocolatey/Quite_Chocolatey.eot?") format("eot"), url("Quite_Chocolatey/Quite_Chocolatey.woff") format("woff"), url("Quite_Chocolatey/Quite_Chocolatey.ttf") format("truetype"), url("Quite_Chocolatey/Quite_Chocolatey.svg#QuiteChocolatey") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: "PT Serif";
+  color: #161616;
+}
+
+h1 {
+  color: #130e27;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+h1 span {
+  color: #fff;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  color: #161616;
+  text-decoration: none;
+}
+a.active {
+  background-color: #161616;
+  border: #161616 1px solid;
+  border-radius: 5px;
+}
+a.active:hover {
+  color: #C62314;
+}
+
+header {
+  background: url(img/Layer1.png) no-repeat center;
+  background-size: cover;
+  padding: 10px 0;
+}
+
+.brand {
+  font-family: "Quite Chocolatey";
+  font-size: 4.4rem;
+  letter-spacing: -2px;
+}
+
+.item {
+  font-family: "Montserrat", sans-serif;
+  font-size: .9rem;
+  padding: 10px 15px;
+}
+
+.header_content {
+  padding: 100px 0;
+}
+
+.title {
+  color: #fff;
+  padding: 20px 0;
+  width: 70%;
+}
+
+.our_services {
+  padding: 45px;
+}
+.our_services h2 {
+  color: #161616;
+}
+.our_services h2 span {
+  color: #C62314;
+}
+
+.services {
+  padding: 95px 50px 50px 50px;
+  text-align: center;
+}
+
+.services_image {
+  height: 60%;
+  width: auto;
+  text-align: center;
+}
+
+.services_text {
+  padding-top: 50px;
+}
+
+.our_story {
+  background-color: #130E27;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.story_text {
+  padding-left: 190px;
+}
+
+.story_button {
+  padding-right: 180px;
+  text-align: center;
+}
+
+.button_text {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  background-color: #C62314;
+  border: 3px solid #161616;
+  border-radius: 5px;
+  padding: 25px 75px;
+  text-align: center;
+}
+
+.button_text:hover {
+  color: #C62314;
+  border: 3px solid #C62314;
+  background-color: #fff;
+}
+
+.pricing {
+  background: #EFEFEF;
+  padding: 70px 0;
+}
+.pricing h2 {
+  text-align: center;
+}
+
+.card-wrap {
+  margin-top: 60px;
+  text-align: center;
+  width: 32%;
+}
+.card-wrap p {
+  margin-bottom: 0px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  padding-top: 30px;
+}
+
+.card-price {
+  color: #C62314;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.popular {
+  background-image: url(img/popular.png);
+  background-repeat: no-repeat;
+}
+
+.black {
+  background: #130e27;
+  border: 3px solid #130e27;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 35px;
+  padding: 10px 0;
+  width: 80%;
+}
+.black:hover {
+  background-color: #fff;
+  color: #130e27;
+}
+
+.red {
+  background: #C62314;
+  border: 3px solid #C62314;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 35px;
+  padding: 10px 0;
+  width: 80%;
+}
+.red:hover {
+  background-color: #fff;
+  color: #C62314;
+}
+
+.testimonial {
+  padding-top: 60px;
+}
+.testimonial h2 {
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.img-right {
+  float: right;
+  padding-right: 30px;
+}
+
+.test-text {
+  margin-bottom: 0;
+}
+
+.test-sign {
+  color: #130e27;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 0;
+}
+
+.quote {
+  padding-left: 40px;
+}
+
+.grey {
+  background: url(img/bg-boy.png) no-repeat left;
+  color: #C62314;
+  padding-top: 20px;
+}
+
+.gallery {
+  padding: 60px 0 40px 70px;
+  text-align: center;
+}
+.gallery h2 {
+  color: #C62314;
+  padding-bottom: 35px;
+}
+
+.gallery-img {
+  text-align: right;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.photo {
+  padding: 10px 0;
+}
+
+.img-round {
+  border-radius: 50%;
+}
+
+.gallery-link {
+  color: #130e27;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+footer {
+  background: #130e27;
+  padding: 50px 0;
+}
+
+.footer_text {
+  color: #fff;
+  padding-top: 35px;
+}
+.footer_text span {
+  color: #C62314;
+}
+
+.footer_logo {
+  font-family: "Quite Chocolatey";
+  font-size: 3.2rem;
+  text-align: right;
+}
+.footer_logo a:hover {
+  color: #C62314;
+}
+
+/* media */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .story_text {
+    padding: 20px;
+  }
+
+  .story_button {
+    padding: 20px;
+  }
+
+  .card-wrap {
+    width: 100%;
+  }
+
+  .grey {
+    background-size: cover;
+  }
+
+  .gallery {
+    padding: 50px 0;
+  }
+
+  .gallery-img {
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .our_story {
+    padding: 40px 0;
+  }
+
+  .footer_logo {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .brand {
+    font-size: 3rem;
+  }
+
+  .services {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
