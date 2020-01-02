@@ -22,7 +22,7 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarContent">
                   <div class="navbar-nav ml-auto text-uppercase"> 
-                     <a class="item active" href="#">Home</a>
+                     <a class="item active" href="#home">Home</a>
                      <a class="item" href="#about">about</a>
                      <a class="item" href="#service">service</a>               
                      <a class="item" href="#gallery">gallery</a>                          
@@ -119,7 +119,7 @@
          </div>
       </div>
    </div>
-   <div class="double_block" id="gallery">
+   <div class="double_block">
       <div class="container">
          <div class="row justify-content-between">
             <div class="col-lg-6 testimonial"> 
@@ -133,7 +133,7 @@
                   <p class="test-sign">DJ Bravo - Frequent Travelera</p>     
                </div>
             </div>
-            <div class="col-lg-6 gallery"> 
+            <div class="col-lg-6 gallery"  id="gallery"> 
                <h2 class="text-uppercase">gallery</h2>
                <div class="container gallery-img">     
                   <div class="row">
@@ -186,10 +186,13 @@
             <input type="tel" class="pop-item" name="phone" placeholder="Phone Number" required>
             <input type="text" class="pop-item" name="country" placeholder="Country" required>
          </div>
-         <input class="form-check-input" type="checkbox"  id="check" onchange="checkBox()">
-         <label class="form-check-label" for="checkBox">
-            I accept the terms & conditions
-         </label>
+         <div class="form-group form-checkbox">
+            <input class="form-check-input input-check" type="checkbox"  id="check" onchange="checkBox()">
+            <label class="form-check-label input-label" for="checkBox">
+               I accept the terms & conditions
+            </label>
+         </div>
+
          <button class="pop-button" type="submit" disabled="disabled">SEND</button>
       </f>
    </div>

@@ -1,7 +1,8 @@
 //  active menu item
-
-let menuItems = document.querySelectorAll(".item");
-menuItems.forEach(item => item.addEventListener("click", activeItem))
+function menuActiveItem(){
+   const menuItems = document.querySelectorAll(".item");
+   menuItems.forEach(item => item.addEventListener("click", activeItem));
+}
 
 function activeItem(){
    let menuItem = event.target;
@@ -9,73 +10,84 @@ function activeItem(){
    menuItem.classList.add("active");
 }
 // scroll menu
-
-const anchors = document.querySelectorAll('a[href*="#"]:not([href="#contact"]')
-anchors.forEach(anchor =>{
-   anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-      const blockID = anchor.getAttribute('href').substr(1)
-      document.getElementById(blockID).scrollIntoView({
-         behavior: 'smooth',
-         block: 'start'
+function scrollMenu(){
+   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#contact"]');
+   anchors.forEach(anchor =>{
+      anchor.addEventListener("click", function (e) {
+         e.preventDefault();
+         const blockID = anchor.getAttribute("href").substr(1);
+         document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+         })
       })
    })
-})
+}
 
 // go to top
+let scrollButton = document.querySelector(".scroll_top");
 
-let scrollButton = document.querySelector(".scroll_top")
-window.addEventListener('scroll', trackScroll);
-scrollButton.addEventListener('click', goToTop);
+function goToTop(){
+   window.addEventListener("scroll", trackScroll);
+   scrollButton.addEventListener("click", goUp);
+}
 
 function trackScroll() {
    let scrolled = window.scrollY + 200;
    let y = document.documentElement.clientHeight;
 
    if (scrolled > y) {
-      scrollButton.classList.add('active');
+      scrollButton.classList.add("active");
    }
    if (scrolled < y) {
-      scrollButton.classList.remove('active');
+      scrollButton.classList.remove("active");
    }
  }
 
-function goToTop() {
+function goUp() {
    if (window.pageYOffset > 0) {
      window.scrollBy(0, -80);
-     setTimeout(goToTop, 0);
-   }
+     setTimeout(goUp, 0);
+   };
+   document.querySelector(".active").classList.remove("active");
+   document.querySelector('[href="#home"]').classList.add("active")
  }
+
 // pop-up open
 
-document.querySelector("#item-contact").addEventListener('click', popup)
+function popupOpen(){
+   document.querySelector("#item-contact").addEventListener("click", popup);
+}
 
 function popup(){
-   document.querySelector(".overlay").classList.add("visible")
-   document.querySelector(".popup").classList.add("visible")
+   document.querySelector(".overlay").classList.add("visible");
+   document.querySelector(".popup").classList.add("visible");
 }
 
 // to active pop-up button
 
 function checkBox(){
-   let checkBox = document.querySelector('#check');
+   let checkBox = document.querySelector("#check");
    let popButton = document.querySelector(".pop-button");
-   (checkBox.checked)?popButton.removeAttribute("disabled"): popButton.setAttribute("disabled","true");
-   
+   (checkBox.checked)?popButton.removeAttribute("disabled"): popButton.setAttribute("disabled","true"); 
 }
-
 
 // pop-up close 
 
-document.querySelector(".pop-button").addEventListener('submit', closePopup)
-document.querySelector(".close").addEventListener('click', closePopup)
-document.querySelector(".overlay").addEventListener('click', closePopup)
-
-function closePopup(){
-   document.querySelector(".overlay").classList.remove("visible")
-   document.querySelector(".popup").classList.remove("visible")
-   document.querySelector('.popup').reset();
+function popupClose(){
+   document.querySelector(".pop-button").addEventListener('submit', close);
+   document.querySelector(".close").addEventListener('click', close);
+   document.querySelector(".overlay").addEventListener('click', close);
 }
 
+function close(){
+   document.querySelector(".overlay").classList.remove("visible");
+   document.querySelector(".popup").classList.remove("visible");
+   document.querySelector(".popup").reset();
+}
 
-
+menuActiveItem()
+scrollMenu()
+goToTop()
+popupOpen()
+popupClose()
