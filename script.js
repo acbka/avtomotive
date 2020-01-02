@@ -11,7 +11,7 @@ function activeItem(){
 }
 // scroll menu
 function scrollMenu(){
-   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#contact"]');
+   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]');
    anchors.forEach(anchor =>{
       anchor.addEventListener("click", function (e) {
          e.preventDefault();
