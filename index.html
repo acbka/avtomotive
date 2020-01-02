@@ -26,7 +26,7 @@
                      <a class="item" href="#about">about</a>
                      <a class="item" href="#service">service</a>               
                      <a class="item" href="#gallery">gallery</a>                          
-                     <a class="item" href="#">contact</a>                   
+                     <a class="item" id="item-contact" href="#contact">contact</a>                   
                   </div>
                </div> 
             </div>
@@ -162,20 +162,40 @@
          </div>
       </div>
    </div>
-     <footer>
-         <div class="container">
-            <div class="row footer justify-content-between">
-               <p class="col-md-7 col-sm-6 footer_text">All Rights Reserved |  2016  |  Designed with love by <span> DesignCoon</span></p>
-               
-               <div class="col-md-4 col-sm-6 footer_logo">
-                  <a href="#home">automotive</a>
-               </div>
+   <button class="scroll_top"></button>
+   <footer>
+      <div class="container">
+         <div class="row footer justify-content-between">
+            <p class="col-md-7 col-sm-6 footer_text">All Rights Reserved |  2016  |  Designed with love by <span> DesignCoon</span></p>               
+            <div class="col-md-4 col-sm-6 footer_logo">
+               <a href="#home">automotive</a>
             </div>
-         </div>   
-     </footer>
-     <script src="./script.js"></script>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+         </div>
+      </div>   
+   </footer>
+   <div class="contact">
+      <div class="overlay">
+      </div>
+      <form class="popup">
+         <h5>REQUEST A QUOTE</h5>
+         <span class="close"></span>
+         <div class="form-group">
+            <input type="text" class="pop-item" name="name" placeholder="Full Name" required>
+            <div class="help-block with-errors"></div>
+            <input type="email" class="pop-item" name="email" placeholder="Email Adress" required>
+            <input type="tel" class="pop-item" name="phone" placeholder="Phone Number" required>
+            <input type="text" class="pop-item" name="country" placeholder="Country" required>
+         </div>
+         <input class="form-check-input" type="checkbox"  id="check" onchange="checkBox()">
+         <label class="form-check-label" for="checkBox">
+            I accept the terms & conditions
+         </label>
+         <button class="pop-button" type="submit" disabled="disabled">SEND</button>
+      </f>
+   </div>
+   <script src="./script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 </body>
 </html>
