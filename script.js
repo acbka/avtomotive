@@ -29,7 +29,7 @@ function scrollMenu(){
 function scrollMenu(){
    const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]');
    animationTime = 300;
-   framesCount = 10;
+   framesCount = 15;
    anchors.forEach(item => {
    item.addEventListener('click', function(e) {
    e.preventDefault();
