@@ -71,7 +71,7 @@ function trackScroll() {
    } else {
       scrollButton.classList.remove("active");
    }
- }
+}
 
 function goUp() {
    if (window.pageYOffset > 0) {
@@ -80,7 +80,7 @@ function goUp() {
    };
    document.querySelector(".active").classList.remove("active");
    document.querySelector('[href="#home"]').classList.add("active")
- }
+}
 
 // pop-up open
 
