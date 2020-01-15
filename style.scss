@@ -76,6 +76,10 @@ header{
    background-size: cover;
    padding: 10px 0;
 }
+.small-menu{
+   display: flex;
+   flex-wrap: nowrap;
+}
 .brand{
    font-family: $lff;
    font-size: 4.4rem;

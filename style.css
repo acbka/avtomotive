@@ -58,6 +58,11 @@ header {
   padding: 10px 0;
 }
 
+.small-menu {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .brand {
   font-family: "Quite Chocolatey";
   font-size: 4.4rem;
