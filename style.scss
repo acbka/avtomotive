@@ -235,13 +235,15 @@ header{
    text-align: center;
    text-decoration: underline;
 }
-footer{
+.footer{
    background: $hColor;
-   padding: 50px 0;
+   padding: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .footer_text{
    color: #fff;
-   padding-top: 35px;
    span{
       color: $redColor;
    }
@@ -396,6 +398,12 @@ input{
    }
    .gallery-img{
       padding: 0 15px;
+      text-align: center;
+   }
+   .footer{
+      flex-direction: column;
+   }
+   .footer_text{
       text-align: center;
    }
 }

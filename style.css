@@ -271,14 +271,16 @@ header {
   text-decoration: underline;
 }
 
-footer {
+.footer {
   background: #130e27;
-  padding: 50px 0;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer_text {
   color: #fff;
-  padding-top: 35px;
 }
 .footer_text span {
   color: #C62314;
@@ -466,6 +468,14 @@ input {
 
   .gallery-img {
     padding: 0 15px;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer_text {
     text-align: center;
   }
 }
