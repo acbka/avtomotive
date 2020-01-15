@@ -288,9 +288,7 @@ footer {
   font-family: "Quite Chocolatey";
   font-size: 3.2rem;
   text-align: right;
-}
-.footer_logo a:hover {
-  color: #C62314;
+  color: #fff;
 }
 
 .scroll_top {
