@@ -53,7 +53,7 @@ a.active:hover {
 }
 
 header {
-  background: url(img/Layer1.png) no-repeat center;
+  background: url(./img/layer1.png) no-repeat center;
   background-size: cover;
   padding: 10px 0;
 }
@@ -168,7 +168,7 @@ header {
 }
 
 .popular {
-  background-image: url(img/popular.png);
+  background-image: url(./img/popular.png);
   background-repeat: no-repeat;
 }
 
@@ -232,7 +232,7 @@ header {
 }
 
 .grey {
-  background: url(img/bg-boy.png) no-repeat left;
+  background: url(./img/bg-boy.png) no-repeat left;
   color: #C62314;
   padding-top: 20px;
 }
