@@ -79,7 +79,7 @@ function goUp() {
      setTimeout(goUp, 0);
    };
    document.querySelector(".active").classList.remove("active");
-   document.querySelector('[href="#home"]').classList.add("active")
+   document.querySelectorAll('[href="#home"]')[0].classList.add("active")
 }
 
 // pop-up open
