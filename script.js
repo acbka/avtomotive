@@ -27,7 +27,7 @@ function scrollMenu(){
 */
 
 function scrollMenu(){
-   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]');
+   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]'); console.log(anchors)
    animationTime = 300;
    framesCount = 15;
    anchors.forEach(item => {
@@ -55,32 +55,38 @@ function scrollMenu(){
 }
 
 // go to top
-let scrollButton = document.querySelector(".scroll_top");
+
 
 function goToTop(){
+   let scrollButton = document.querySelector(".scroll_top");
+
    window.addEventListener("scroll", trackScroll);
    scrollButton.addEventListener("click", goUp);
-}
 
-function trackScroll() {
-   let scrolled = window.scrollY + 200;
-   let y = document.documentElement.clientHeight;
+   function trackScroll() {
+      let scrolled = window.scrollY + 200;
+      let y = document.documentElement.clientHeight;
+   
+      if (scrolled > y) {
+         scrollButton.classList.add("active");
+      } else {
+         scrollButton.classList.remove("active");
+      }
+   }
 
-   if (scrolled > y) {
-      scrollButton.classList.add("active");
-   } else {
-      scrollButton.classList.remove("active");
+   function goUp() {
+      if (window.pageYOffset > 0) {
+        window.scrollBy(0, -80);
+        setTimeout(goUp, 0);
+      };
+      document.querySelector(".active").classList.remove("active");
+      document.querySelector('[href="#home"]').classList.add("active")
    }
 }
 
-function goUp() {
-   if (window.pageYOffset > 0) {
-     window.scrollBy(0, -80);
-     setTimeout(goUp, 0);
-   };
-   document.querySelector(".active").classList.remove("active");
-   document.querySelector('[href="#home"]').classList.add("active")
-}
+
+
+
 
 // pop-up open
 
