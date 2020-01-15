@@ -8,6 +8,7 @@ function activeItem(){
    let menuItem = event.target;
    document.querySelector(".active").classList.remove("active");
    menuItem.classList.add("active");
+   document.querySelector(".navbar-collapse").classList.remove("show")
 }
 // scroll menu 
 /*
@@ -27,7 +28,7 @@ function scrollMenu(){
 */
 
 function scrollMenu(){
-   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]'); console.log(anchors)
+   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]'); 
    animationTime = 300;
    framesCount = 15;
    anchors.forEach(item => {
