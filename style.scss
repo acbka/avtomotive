@@ -77,15 +77,18 @@ header{
    padding: 10px 0;
 }
 .small-menu{
+   width: 100%;
    display: flex;
    flex-wrap: nowrap;
+   justify-content: space-between;
 }
 .brand{
    font-family: $lff;
    font-size: 4.4rem;
    letter-spacing: -2px;
 }
-.item{
+.item,
+.item-contact{
    font-family: $hff;
    font-size: .9rem;
    padding: 10px 15px;

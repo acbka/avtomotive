@@ -1,59 +1,89 @@
-//  active menu item
-function menuActiveItem(){
-   const menuItems = document.querySelectorAll(".item");
-   menuItems.forEach(item => item.addEventListener("click", activeItem));
-}
 
-function activeItem(){
-   let menuItem = event.target;
-   document.querySelector(".active").classList.remove("active");
-   menuItem.classList.add("active");
-   document.querySelector(".navbar-collapse").classList.remove("show")
-}
-// scroll menu 
-/*
-function scrollMenu(){
-   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]');
-   anchors.forEach(anchor =>{
-      anchor.addEventListener("click", function (e) {
+// active menu item
+
+let menuItems = Array.from(document.querySelectorAll(".item"));
+
+let anchors = menuItems.map(el => {
+   hash = el.href.replace(/[^#]*(.*)/, '$1'); 
+   return hash;
+})
+
+let sections = anchors.map(hash => {
+   let block = document.querySelector(hash);
+   return block ;
+})
+
+let menuHeight = document.querySelector(".navbar").offsetHeight;
+let V = .1;
+
+function activeMenuItem() {
+   menuItems.forEach(elem => {
+      elem.addEventListener('click', function (e) {
          e.preventDefault();
-         const blockID = anchor.getAttribute("href").substr(1);
-         document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-         })
-      })
-   })
-}
-*/
+         scrollMenu(elem);
+         
+         menuItems.forEach((nl) => {
+            if (nl != this) {
+               nl.classList.remove('active');
+            }
+         });
 
-function scrollMenu(){
-   const anchors = document.querySelectorAll('a[href*="#"]:not([href="#"]'); 
-   animationTime = 300;
-   framesCount = 15;
-   anchors.forEach(item => {
-   item.addEventListener('click', function(e) {
-   e.preventDefault();
-   let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-// запускаем интервал, в котором
-   let scroller = setInterval(function() {
-   // считаем на сколько скроллить за 1 такт
-   let scrollBy = coordY / framesCount;
-   // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-   // и дно страницы не достигнуто
-   if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-   // то скроллим на к-во пикселей, которое соответствует одному такту
-   window.scrollBy(0, scrollBy);
-   } else {
-   // иначе добираемся до элемента и выходим из интервала
-   window.scrollTo(0, coordY);
-   clearInterval(scroller);
-   }
-   // время интервала равняется частному от времени анимации и к-ва кадров
-   }, animationTime / framesCount);
-   });
+         this.classList.add('active');
+         document.querySelector(".navbar-collapse").classList.toggle("show")
+      }, false);
    });
 }
+
+   // scroll menu
+
+   function scrollMenu(item) {
+      var w = window.pageYOffset;
+      hash = item.href.replace(/[^#]*(.*)/, '$1'); 
+      t = document.querySelector(hash).getBoundingClientRect().top; 
+
+      start = null;
+   
+      requestAnimationFrame(step);
+   
+      function step(time) {
+         let menuHeight = document.querySelector(".navbar").offsetHeight;
+
+         if (start === null) start = time;
+
+         let progress = time - start;
+         r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+         window.scrollTo(0, r);
+
+         if (r != w + t) {
+            requestAnimationFrame(step)
+         } else { 
+            window.scrollTo(0, t + w - menuHeight)
+            //location.hash = hash  -  URL с хэшем если меню не fixed
+         }
+      };
+   }
+
+   
+   // scroll page
+
+function scrollPage(){
+   let menuItems = Array.from(document.querySelectorAll(".item"));
+   window.addEventListener('scroll', activeBlock);
+
+   function activeBlock(){
+      sections.forEach(item => {
+         let start = item.offsetTop - menuHeight;
+         let end = item.offsetTop + item.offsetHeight/1.3;
+
+         if (pageYOffset > start && pageYOffset < end){
+            document.querySelector(".active").classList.remove("active");
+            let index = sections.indexOf(item);
+            menuItems[index].classList.add("active");
+         }
+      })
+   }
+}
+
 
 // go to top
 
@@ -122,8 +152,7 @@ function close(){
    document.querySelector(".popup").reset();
 }
 
-menuActiveItem()
-scrollMenu()
+activeMenuItem()
 goToTop()
 popupOpen()
 popupClose()

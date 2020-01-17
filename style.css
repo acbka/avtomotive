@@ -59,8 +59,10 @@ header {
 }
 
 .small-menu {
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .brand {
@@ -69,7 +71,8 @@ header {
   letter-spacing: -2px;
 }
 
-.item {
+.item,
+.item-contact {
   font-family: "Montserrat", sans-serif;
   font-size: .9rem;
   padding: 10px 15px;
